@@ -26,20 +26,20 @@ public class TaxHw {
         switch (getTaxBracket(income))
         {
             case Bracket37:
-                totalTaxes +=;
+                totalTaxes += (income - 518401) * .37;
             case Bracket35:
-                totalTaxes +=;
+                totalTaxes += (income - 207351) * .35;
             case Bracket32:
-                totalTaxes +=;
+                totalTaxes += (income - 163301) * .32;
             case Bracket24:
-                totalTaxes +=;
+                totalTaxes += (income - 85526) * .24;
             case Bracket22:
-                totalTaxes +=;
+                totalTaxes += (income - 40126) * .22;
             case Bracket12:
-                totalTaxes +=;
-            case Bracket0:
-                totalTaxes +=;
+                totalTaxes += (income - 9876) * .12;
         }
+
+        JOptionPane.showMessageDialog(null, "You owe $" + totalTaxes + " in taxes");
     }
 
     private static TaxBracket getTaxBracket(int grossIncome){
